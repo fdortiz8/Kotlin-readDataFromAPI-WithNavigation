@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.login.LoginFragment">
+
+    <data>
+        <variable
+            name="loginFragment"
+            type="edu.ucsc.cse118.assignment3.ui.login.LoginFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="479dp"
+        android:orientation="vertical"
+        android:padding="@dimen/side_margin">
+
+        <ImageView
+            android:layout_width="318dp"
+            android:layout_height="166dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_between_elements"
+            android:importantForAccessibility="no"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/ic_uc_santa_cruz_banana_slug" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_between_elements"
+            android:hint="@string/prompt_email"
+            android:inputType="textEmailAddress"
+            android:minWidth="@dimen/logo_width"
+            android:selectAllOnFocus="true" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_between_elements"
+            android:hint="@string/prompt_password"
+            android:inputType="textPassword"
+            android:minWidth="@dimen/logo_width"
+            android:selectAllOnFocus="true" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_between_elements"
+            android:minWidth="@dimen/logo_width"
+            android:onClick="@{() -> loginFragment.login()}"
+            android:text="@string/login" />
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_between_elements"
+            android:minWidth="@dimen/logo_width"
+            android:selectAllOnFocus="true" />
+
+    </LinearLayout>
+</layout>
